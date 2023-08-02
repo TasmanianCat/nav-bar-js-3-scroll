@@ -1,0 +1,227 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/* Google fonts */
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+html, body {
+	line-height: 1.6;
+	font-size: 1.1rem;
+	letter-spacing: 0.02rem;
+	scroll-behavior: smooth;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+	min-height: 62.5rem;
+}
+
+h1 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	line-height: 1.1;
+	padding: 0 1rem;
+}
+
+.p-section {
+	font-size: 1rem;
+	font-weight: 300;
+	padding: 1.5rem 4rem;
+}
+
+.banner {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(/img/16.jpg);
+	background-size: cover;
+}
+
+.banner, .content {
+	text-align: center;
+}
+
+.btn {
+	font-size: 1rem;
+	color: crimson;
+	background-color: floralwhite;
+	display: inline-block;
+	padding: 0.5rem 0.75rem;
+	margin-top: 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.125rem;
+	transition: 0.5s ease;
+}
+
+.btn:hover {
+	letter-spacing: 0.25rem;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem 3rem;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+header.sticky {
+	background-color: whitesmoke;
+	padding: 1rem 4rem;
+	box-shadow: 0 0.375rem 1rem rgba(0,0,0,0.5);
+}
+
+header .logo {
+	color: maroon;
+	font-weight: 700;
+	font-size: 1.4rem;
+	text-decoration: none;
+}
+
+header.sticky .logo {
+	color: darkblue;
+}
+
+header.sticky span {
+	color: crimson;
+}
+span {
+	color: darkblue;
+}
+
+header .navigation {
+	position: relative;
+	display: flex;
+}
+
+header .navigation li {
+	margin-left: 1.875rem;
+}
+
+header .navigation li a {
+	color: maroon;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+header.sticky .navigation li a {
+	color: rgb(0, 0, 139);
+}
+
+header .navigation li a:hover {
+	color: crimson;
+}
+
+@media screen and (max-width: 52em) {
+
+	header,
+	header.sticky {
+		padding: 1.3rem 1.3rem;
+		font-size: 1.1rem;
+	}
+
+	header .logo {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 51.5em) {
+	header, header.sticky {
+		padding: 1.2rem 1.2rem;
+		font-size: 1rem;
+	}
+	header .logo {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 42.5em) {
+	header .navigation {
+		display: none;
+	}
+	header.sticky {
+		padding: 1rem 1rem;
+	}
+	header .navigation.active {
+		width: 100%;
+		height: calc(100% - 3.875rem);
+		position: fixed;
+		top: 3.875rem;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: rgb(255, 255, 255);
+	}
+		header .navigation li {
+			margin-left: 0;
+		}
+	header .navigation li a {
+		text-decoration: none;
+		font-size: 1.6rem;
+		font-weight: 300;
+	}
+	.menu-toggle{
+		position: relative;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-image: url(/img/bars-solid.svg);
+		background-size: 1.4rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+	.menu-toggle.active {
+		background-image: url(/img/xmark-solid.svg);
+		background-size: 1rem;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
