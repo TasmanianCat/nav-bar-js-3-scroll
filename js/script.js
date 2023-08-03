@@ -14,8 +14,9 @@ window.addEventListener('scroll', function () {
 });
 
 function toggleMenu() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navigation = document.querySelector('.navigation');
-    menuToggle.classList.toggle('active');
-    navigation.classList.toggle('active');
+    const mToggle = document.querySelector('.menutoggle');
+    const nav = document.querySelector('.navigation');
+    mToggle.classList.toggle('active');
+    nav.classList.toggle('active');
+    document.body.classList.toggle('lock-scroll');
 }

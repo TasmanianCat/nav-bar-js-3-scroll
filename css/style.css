@@ -13,7 +13,7 @@ a:focus,a:active{outline: none;}
 
 nav,footer,header,aside{display: block;}
 
-html,body{
+html, body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -72,8 +72,6 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url(/img/16.jpg);
-	background-size: cover;
 }
 
 .banner, .content {
@@ -208,20 +206,33 @@ header .navigation li a:hover {
 		font-size: 1.6rem;
 		font-weight: 300;
 	}
-	.menu-toggle{
+	.menutoggle {
 		position: relative;
 		width: 1.5rem;
 		height: 1.5rem;
-		background-image: url(/img/bars-solid.svg);
+		background-image: url('../img/bars-solid.svg');
 		background-size: 1.4rem;
 		background-repeat: no-repeat;
 		background-position: center;
 		cursor: pointer;
 	}
-	.menu-toggle.active {
-		background-image: url(/img/xmark-solid.svg);
+	.menutoggle.active {
+		background-image: url('../img/xmark-solid.svg');
 		background-size: 1rem;
 		background-repeat: no-repeat;
 		background-position: center;
+		cursor: pointer;
 	}
+}
+
+@media screen and (max-width: 51.5em) {
+
+	h1 {
+		padding: 0 1.2rem;
+		font-size: 1.4rem;
+	}
+}
+
+.lock-scroll {
+	overflow: hidden;
 }
